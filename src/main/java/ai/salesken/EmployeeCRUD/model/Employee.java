@@ -1,4 +1,6 @@
 package ai.salesken.EmployeeCRUD.model;
+
+// TODO: Auto-generated Javadoc
 /**
  * The Class Employee.
  */
