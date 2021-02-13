@@ -27,6 +27,7 @@ public interface EmployeeService {
 	 * Update an existing employee.
 	 *
 	 * @param e the updated employee object
+	 * @return 
 	 * @throws EmployeeNotFoundException the employee not found exception
 	 */
 	public void updateEmployee(Employee e) throws EmployeeNotFoundException;
