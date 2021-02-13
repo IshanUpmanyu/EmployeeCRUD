@@ -2,6 +2,8 @@
  This repository is a REST API to perform CRUD operations on employee.
  The project is implemented using SpringBoot.
  This project does not uses in memory java objects to store the data, thus data is not persisted between application restarts.
+## Requirement
+This application requires Java 8 or higher to run
 
 ## Steps to build
 ### Windows
