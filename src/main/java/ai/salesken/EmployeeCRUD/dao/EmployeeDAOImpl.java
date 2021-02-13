@@ -46,6 +46,9 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 
 	@Override
 	public void updateEmployee(Employee e) throws EmployeeNotFoundException {
+		if( employeeRepository.get(e.getEmployeeId())== null) {
+			throw new EmployeeNotFoundException(e.getEmployeeId());
+		}
 		employeeRepository.put(e.getEmployeeId(), e);
 	}
 

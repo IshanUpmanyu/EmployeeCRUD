@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -59,7 +60,7 @@ public class EmployeeController {
 	 * @return the map
 	 */
 	@PostMapping(produces = "application/json")
-	public Map<String, String> addEmployee(Employee e) {
+	public Map<String, String> addEmployee(@RequestBody Employee e) {
 		long employeeId = employeeService.addEmployee(e);
 		return Collections.singletonMap("response", "Employee created with id: "+employeeId);
 	}
@@ -72,7 +73,7 @@ public class EmployeeController {
 	 * @throws EmployeeNotFoundException the employee not found exception
 	 */
 	@PutMapping(produces = "application/json")
-	public Map<String, String> updateEmployee(Employee e) throws EmployeeNotFoundException {
+	public Map<String, String> updateEmployee(@RequestBody Employee e) throws EmployeeNotFoundException {
 		employeeService.updateEmployee(e);
 		return Collections.singletonMap("response", "Employee updated with id: "+e.getEmployeeId());
 	}
