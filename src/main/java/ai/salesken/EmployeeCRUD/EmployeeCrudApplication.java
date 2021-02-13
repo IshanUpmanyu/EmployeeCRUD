@@ -1,4 +1,4 @@
-package com.salesken.EmployeeCRUD;
+package ai.salesken.EmployeeCRUD;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
